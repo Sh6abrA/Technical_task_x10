@@ -1,0 +1,204 @@
+* {
+  padding: 0 0;
+  margin: 0 0;
+  font-family: Montserrat; }
+
+body {
+  margin: 20px; }
+
+.main .calculator {
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  border: 1px solid var(--gray, #90909A);
+  background: #F4F4F5;
+  padding: 30px; }
+  .main .calculator__input {
+    border-right: 1px solid #DCDCDC;
+    padding-right: 30px; }
+    .main .calculator__input .form-container {
+      width: 100%;
+      margin-top: 25px;
+      white-space: nowrap; }
+      .main .calculator__input .form-container:first-child {
+        margin-top: 0; }
+      .main .calculator__input .form-container__title {
+        color: #333;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500; }
+      .main .calculator__input .form-container__number {
+        outline: none;
+        margin-top: 10px;
+        width: 320px;
+        height: 35px;
+        padding: 0px 12px;
+        border-radius: 6px;
+        border: 1px solid var(--gray-field, #DCDCDC);
+        background: #FFF; }
+      .main .calculator__input .form-container__currency-symbol {
+        text-align: right;
+        width: 25px;
+        display: inline-block;
+        position: relative;
+        left: -40px; }
+      .main .calculator__input .form-container__range {
+        z-index: 3;
+        -webkit-appearance: none;
+        display: block;
+        position: relative;
+        top: -2px;
+        height: 2px;
+        width: 308px;
+        margin-left: 6px;
+        margin-right: 6px; }
+        .main .calculator__input .form-container__range::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 15px;
+          width: 15px;
+          border-radius: 50%;
+          background: #B5A08D;
+          border: none; }
+        .main .calculator__input .form-container__range::-moz-range-thumb {
+          background: #B5A08D;
+          border: none; }
+        .main .calculator__input .form-container__range::-ms-thumb {
+          border: none;
+          background: #B5A08D; }
+      .main .calculator__input .form-container .button-container {
+        margin-top: 10px; }
+        .main .calculator__input .form-container .button-container__button {
+          cursor: pointer;
+          background: rgba(144, 144, 154, 0.2);
+          border: none;
+          border-radius: 2px;
+          margin-left: 5px;
+          padding: 2px 6px;
+          color: #000;
+          text-align: center;
+          font-size: 12px;
+          font-weight: 400; }
+          .main .calculator__input .form-container .button-container__button:first-child {
+            margin-left: 0; }
+  .main .calculator__output {
+    width: 386px;
+    padding-left: 30px; }
+    .main .calculator__output .monthly-payment {
+      display: flex; }
+      .main .calculator__output .monthly-payment__price {
+        color: var(--black, #29282D);
+        font-size: 26px;
+        font-weight: 600; }
+      .main .calculator__output .monthly-payment__title {
+        margin-left: 10px;
+        color: #000;
+        font-size: 12px;
+        font-weight: 400; }
+      .main .calculator__output .monthly-payment .download-table {
+        display: block;
+        cursor: pointer;
+        margin-left: auto;
+        margin-bottom: auto; }
+    .main .calculator__output .payment-info {
+      list-style-type: none;
+      margin-top: 30px; }
+      .main .calculator__output .payment-info .list-item {
+        display: flex;
+        align-items: flex-end;
+        margin-top: 15px; }
+        .main .calculator__output .payment-info .list-item:first-child {
+          margin-top: 0; }
+        .main .calculator__output .payment-info .list-item__name {
+          white-space: nowrap;
+          color: #000;
+          font-size: 16px;
+          font-weight: 400; }
+        .main .calculator__output .payment-info .list-item__block_dotted {
+          width: 100%;
+          margin-right: 5px;
+          margin-left: 5px;
+          margin-bottom: 3px;
+          border-bottom: 3px dotted #90909A; }
+        .main .calculator__output .payment-info .list-item__cost {
+          margin-left: auto;
+          white-space: nowrap; }
+    .main .calculator__output .schedule-button {
+      cursor: pointer;
+      margin-top: 30px;
+      width: 100%;
+      height: 48px;
+      background-color: #F4F4F5;
+      border-radius: 4px;
+      border: 2px solid var(--brown, #B5A08D);
+      color: var(--brown, #B5A08D);
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500; }
+      .main .calculator__output .schedule-button:hover {
+        background-color: var(--brown, #B5A08D);
+        color: #F4F4F5; }
+.main .info-sender {
+  display: flex;
+  margin-top: 30px;
+  align-items: center; }
+  .main .info-sender__apply {
+    cursor: pointer;
+    width: 235px;
+    height: 48px;
+    border-radius: 4px;
+    border: 2px solid var(--brown, #B5A08D);
+    background: var(--brown, #B5A08D);
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700; }
+  .main .info-sender__mail {
+    cursor: pointer;
+    margin-left: 20px;
+    color: #B5A08D;
+    text-align: center;
+    font-size: 13p;
+    font-weight: 500;
+    text-decoration-line: underline; }
+
+.table-container {
+  transition: all 0.5s;
+  opacity: 0; }
+  .table-container__title {
+    margin-top: 10px;
+    font-size: 18px; }
+  .table-container table {
+    display: block;
+    min-height: 300px;
+    max-height: 400px;
+    width: 1700px;
+    margin-top: 30px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding-top: 0; }
+    .table-container table th {
+      position: sticky;
+      top: -5px;
+      padding: 10px 10px;
+      text-align: left;
+      width: 250px;
+      margin: 0;
+      color: white;
+      background-color: #90909A;
+      border: 1px solid black;
+      text-transform: uppercase; }
+      .table-container table th:nth-child(1) {
+        width: 180px; }
+      .table-container table th:nth-child(5) {
+        width: 400px; }
+    .table-container table td {
+      padding-left: 10px;
+      text-align: left;
+      margin: 0;
+      color: black;
+      border: 1px solid black; }
+
+/*# sourceMappingURL=style.css.map */
