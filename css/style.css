@@ -52,7 +52,8 @@ body {
         height: 2px;
         width: 308px;
         margin-left: 6px;
-        margin-right: 6px; }
+        margin-right: 6px;
+        outline: none; }
         .main .calculator__input .form-container__range::-webkit-slider-thumb {
           -webkit-appearance: none;
           height: 15px;
